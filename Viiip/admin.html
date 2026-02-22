@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель — BestGames</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page" data-theme="dark">
+  <main class="main">
+    <form class="form form_mod_admin">
+      <h2 class="form__title">Добавить новую игру</h2>
+      
+      <div class="form__field">
+        <label for="game-name" class="form__label">Название игры</label>
+        <input type="text" id="game-name" class="form__input" required />
+      </div>
+      
+      <div class="form__field">
+        <label for="game-genre" class="form__label">Жанр</label>
+        <input type="text" id="game-genre" class="form__input" required />
+      </div>
+      
+      <div class="form__field">
+        <label for="game-image" class="form__label">Изображение</label>
+        <input type="file" id="game-image" class="form__input" accept="image/*" required />
+      </div>
+      
+      <div class="form__field">
+        <label for="game-dev" class="form__label">Компания-разработчик</label>
+        <input type="text" id="game-dev" class="form__input" required />
+      </div>
+      
+      <div class="form__field">
+        <label for="game-desc" class="form__label">Описание</label>
+        <textarea id="game-desc" class="form__input" rows="4" required></textarea>
+      </div>
+      
+      <div class="form__field">
+        <label for="game-price" class="form__label">Стоимость (₽)</label>
+        <input type="number" id="game-price" class="form__input" min="0" step="0.01" required />
+      </div>
+      
+      <button type="submit" class="button button_mod_theme_primary button_mod_size_large">
+        <span class="button__text">Добавить</span>
+      </button>
+    </form>
+  </main>
+</body>
+</html>

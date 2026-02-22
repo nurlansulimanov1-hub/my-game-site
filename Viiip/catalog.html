@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог — BestGames</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page" data-theme="dark">
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo">
+        <svg class="logo__image" width="140" height="32" viewBox="0 0 140 32" aria-label="BestGames">
+          <text x="0" y="26" font-family="GameFont, sans-serif" font-size="26" fill="#7289DA">BestGames</text>
+        </svg>
+      </a>
+      <button class="burger" aria-label="Фильтр">
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="catalog__title">Каталог игр</h1>
+    <div class="games__grid">
+      <!-- 10 карточек (повторите структуру из index.html) -->
+      <article class="game-card">
+        <img src="img/games/game1.jpg" alt="Cyber Nexus" class="game-card__image" loading="lazy" />
+        <div class="game-card__content">
+          <h3 class="game-card__title">Cyber Nexus</h3>
+          <p class="game-card__genre">Киберпанк, Экшен</p>
+          <p class="game-card__developer">Neon Studios</p>
+          <div class="game-card__rating">★★★★☆</div>
+          <p class="game-card__price">1 299 ₽</p>
+          <a href="#" class="button button_mod_theme_outline button_mod_size_small">
+            <span class="button__text">Подробнее</span>
+          </a>
+        </div>
+      </article>
+      <!-- ... ещё 9 карточек -->
+    </div>
+  </main>
+</body>
+</html>

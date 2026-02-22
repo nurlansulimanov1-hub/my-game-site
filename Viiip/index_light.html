@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BestGames — Маркетплейс игр</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" as="font" href="fonts/gamefont.woff2" type="font/woff2" crossorigin />
+    <link rel="preload" as="font" href="fonts/uifont.woff2" type="font/woff2" crossorigin />
+</head>
+
+<body class="page" data-theme="light">
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <svg class="logo__image" width="140" height="32" viewBox="0 0 140 32" aria-label="BestGames">
+                    <text x="0" y="26" font-family="GameFont, sans-serif" font-size="26" fill="#7289DA">BestGames</text>
+                </svg>
+            </a>
+
+            <button class="burger" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#search" class="nav__link">Поиск</a></li>
+                    <li class="nav__item"><a href="register.html" class="nav__link">Регистрация</a></li>
+                    <li class="nav__item">
+                        <a href="login.html" class="button button_mod_theme_primary">
+                            <span class="button__text">Войти</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Слайдер -->
+        <section class="slider" aria-label="Новинки игр">
+            <button class="slider__nav slider__nav_prev" aria-label="Предыдущий слайд">‹</button>
+            <div class="slider__track">
+                <div class="slider__slide">
+                    <img src="img/games/slide1.jpg" alt="Cyber Nexus — киберпанк-экшен" class="slider__image"
+                        loading="lazy" />
+                    <div class="slider__content">
+                        <h2 class="slider__title">Cyber Nexus</h2>
+                        <p class="slider__price">1 299 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_medium">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slider__slide">
+                    <img src="img/games/slide2.jpg" alt="Stellar Drift — космический симулятор" class="slider__image"
+                        loading="lazy" />
+                    <div class="slider__content">
+                        <h2 class="slider__title">Stellar Drift</h2>
+                        <p class="slider__price">899 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_medium">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="slider__slide">
+                    <img src="img/games/slide3.jpg" alt="Shadow Pact — RPG с открытым миром" class="slider__image"
+                        loading="lazy" />
+                    <div class="slider__content">
+                        <h2 class="slider__title">Shadow Pact</h2>
+                        <p class="slider__price">1 599 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_medium">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider__nav slider__nav_next" aria-label="Следующий слайд">›</button>
+            <div class="slider__dots">
+                <button class="slider__dot slider__dot_mod_active" aria-label="Слайд 1"></button>
+                <button class="slider__dot" aria-label="Слайд 2"></button>
+                <button class="slider__dot" aria-label="Слайд 3"></button>
+            </div>
+        </section>
+
+        <!-- Быстрый поиск по жанрам -->
+        <section class="search" id="search">
+            <h2 class="visually-hidden">Быстрый поиск по жанрам</h2>
+            <form class="search__form">
+                <input type="text" class="search__input" placeholder="Введите жанр..." list="genres" />
+                <datalist id="genres">
+                    <option value="Экшен">
+                    <option value="RPG">
+                    <option value="Стратегия">
+                    <option value="Симулятор">
+                    <option value="Гонки">
+                </datalist>
+                <button type="submit" class="button button_mod_theme_primary button_mod_size_medium">
+                    <span class="button__text">Найти</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Преимущества -->
+        <section class="benefits">
+            <h2 class="visually-hidden">Преимущества BestGames</h2>
+            <div class="benefits__grid">
+                <div class="benefit">
+                    <img src="img/icons/price.svg" alt="" class="benefit__icon" aria-hidden="true" />
+                    <p class="benefit__text">Привлекательные цены</p>
+                </div>
+                <div class="benefit">
+                    <img src="img/icons/sale.svg" alt="" class="benefit__icon" aria-hidden="true" />
+                    <p class="benefit__text">Ежемесячные акции</p>
+                </div>
+                <div class="benefit">
+                    <img src="img/icons/support.svg" alt="" class="benefit__icon" aria-hidden="true" />
+                    <p class="benefit__text">Круглосуточная поддержка</p>
+                </div>
+                <div class="benefit">
+                    <img src="img/icons/fast.svg" alt="" class="benefit__icon" aria-hidden="true" />
+                    <p class="benefit__text">Быстрая покупка</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Популярные игры -->
+        <section class="games">
+            <h2 class="games__title">Популярные игры</h2>
+            <div class="games__grid">
+                <article class="game-card">
+                    <img src="img/games/game1.jpg" alt="Cyber Nexus — киберпанк-экшен" class="game-card__image"
+                        loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Cyber Nexus</h3>
+                        <p class="game-card__genre">Киберпанк, Экшен</p>
+                        <p class="game-card__developer">Neon Studios</p>
+                        <div class="game-card__rating">★★★★☆</div>
+                        <p class="game-card__price">1 299 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="img/games/game2.jpg" alt="Stellar Drift — космический симулятор" class="game-card__image"
+                        loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Stellar Drift</h3>
+                        <p class="game-card__genre">Симулятор, Приключения</p>
+                        <p class="game-card__developer">Galaxy Labs</p>
+                        <div class="game-card__rating">★★★★★</div>
+                        <p class="game-card__price">899 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="img/games/game3.jpg" alt="Shadow Pact — RPG" class="game-card__image" loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Shadow Pact</h3>
+                        <p class="game-card__genre">RPG, Фэнтези</p>
+                        <p class="game-card__developer">Mythic Games</p>
+                        <div class="game-card__rating">★★★★☆</div>
+                        <p class="game-card__price">1 599 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="img/games/game4.jpg" alt="Neon Racer — гонки" class="game-card__image" loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Neon Racer</h3>
+                        <p class="game-card__genre">Гонки, Киберпанк</p>
+                        <p class="game-card__developer">SpeedCore</p>
+                        <div class="game-card__rating">★★★☆☆</div>
+                        <p class="game-card__price">699 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="img/games/game5.jpg" alt="Forest Keeper — стратегия" class="game-card__image"
+                        loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Forest Keeper</h3>
+                        <p class="game-card__genre">Стратегия, Симулятор</p>
+                        <p class="game-card__developer">Green Pixel</p>
+                        <div class="game-card__rating">★★★★☆</div>
+                        <p class="game-card__price">499 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="img/games/game6.jpg" alt="Void Walker — хоррор" class="game-card__image" loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Void Walker</h3>
+                        <p class="game-card__genre">Хоррор, Приключения</p>
+                        <p class="game-card__developer">DarkMatter</p>
+                        <div class="game-card__rating">★★★★★</div>
+                        <p class="game-card__price">799 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <img src="img/games/game7.jpg" alt="Pixel Empire — стратегия" class="game-card__image"
+                        loading="lazy" />
+                    <div class="game-card__content">
+                        <h3 class="game-card__title">Pixel Empire</h3>
+                        <p class="game-card__genre">Стратегия, Онлайн</p>
+                        <p class="game-card__developer">RetroForge</p>
+                        <div class="game-card__rating">★★★★☆</div>
+                        <p class="game-card__price">999 ₽</p>
+                        <a href="catalog.html" class="button button_mod_theme_outline button_mod_size_small">
+                            <span class="button__text">Подробнее</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Наши партнёры -->
+        <section class="partners">
+            <h2 class="partners__title">Наши партнёры</h2>
+            <div class="partners__logos">
+                <img src="img/partners/steam.svg" alt="Steam" class="partner-logo" />
+                <img src="img/partners/epic.svg" alt="Epic Games" class="partner-logo" />
+                <img src="img/partners/gog.svg" alt="GOG" class="partner-logo" />
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__contacts">
+                <p>8-800-999-55-99</p>
+                <p>best@games.ru</p>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__heading">Клиентам</h3>
+                <ul class="footer__list">
+                    <li><a href="#">Партнерам</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__heading">Навигация</h3>
+                <ul class="footer__list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="register.html">Регистрация</a></li>
+                    <li><a href="login.html">Авторизация</a></li>
+                    <li><a href="profile.html">Личный кабинет</a></li>
+                    <li><a href="#search">Поиск</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
